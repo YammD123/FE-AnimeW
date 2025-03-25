@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Autoplay from 'embla-carousel-autoplay';
-	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import { Star } from '@lucide/svelte';
 
 	const plugin = Autoplay({ delay: 2000, stopOnInteraction: true });
 	let { datas } = $props();
@@ -25,10 +23,10 @@
 						alt={data.title}
 						class="h-full opacity-60 w-full rounded-md object-cover"
 					/>
-                    <div class="absolute bottom-0 w-full pl-4 pb-24 bg-gradient-to-t from-black to-transparent text-white">
-						<h2 class="font-serif text-4xl md:text-6xl  font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">{data.title}</h2>
-                        <h3 class="md:text-2xl text-xl font-semibold font-mono">{data.title_japanese}</h3>
-						<p class="text-base font-sans max-w-xs md:max-w-xl line-clamp-2 md:line-clamp-3">{data.synopsis}</p>
+                    <div class="absolute  bottom-0 w-full pl-4 pb-24 bg-gradient-to-t from-black to-transparent text-white">
+						<h2 class="font-serif pr-10 text-4xl md:text-6xl text-wrap font-bold text-white line-clamp-3 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">{data.title}</h2>
+                        <h3 class="md:text-2xl text-xl pr-10 font-semibold text-wrap font-mono">{data.title_japanese}</h3>
+						<p class="text-base font-sans max-w-xs pr-10 md:max-w-xl line-clamp-2 md:line-clamp-3">{data.synopsis}</p>
 						<div class="flex items-center gap-4 mt-2">
 							<div class="flex items-center gap-1">
 								<!-- Icon Bintang (Rating) Via Svg -->
