@@ -55,7 +55,7 @@
 		{:else}
 			<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
 				{#key season}
-					{#each datas.data as seasonData, index}
+					{#each datas.data as seasonData, index(index)}
 						<a href={`/detail/${seasonData.mal_id}`}>
 							<div
 								class="group relative mt-4 w-40 overflow-hidden bg-slate-200"

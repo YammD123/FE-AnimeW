@@ -48,7 +48,7 @@
 				<div class="h-72 w-64 animate-pulse rounded-md bg-slate-700/35"></div>
 			{/each}
 		{:else}
-			{#each datas.data as data}
+			{#each datas.data as data,index(index)}
 				<HoverCard.Root>
 					<HoverCard.Trigger>
 						<div class="relative w-64">

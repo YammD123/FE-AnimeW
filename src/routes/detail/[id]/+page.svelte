@@ -65,7 +65,7 @@
 		Charachters
 	</h2>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 pt-6">
-		{#each data.characters.data as dataCharacters}
+		{#each data.characters.data as dataCharacters,index (index)}
 			<div class="relative w-64">
 				<img
 					class="h-72 w-full rounded-md object-cover"
