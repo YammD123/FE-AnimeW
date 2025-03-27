@@ -42,7 +42,7 @@
 		{/each}
 	</div>
 	<Separator class="mt-2 block w-full" />
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-3 pt-6">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 pt-6">
 		{#if isLoading}
 			{#each Array(18) as _, i}
 				<div class="h-72 w-64 animate-pulse rounded-md bg-slate-700/35"></div>
