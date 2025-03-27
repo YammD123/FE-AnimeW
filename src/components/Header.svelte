@@ -34,7 +34,7 @@
 
 <header class="header border-b border-gray-400/45 bg-[#09090b] text-white">
 	<div class="flex w-full items-center justify-between gap-4 p-3">
-		<h1 class="text-2xl font-bold">Siam</h1>
+		<a href="/"> <h1 class="text-2xl font-bold">YammD.</h1></a>
 		<form class="flex items-center justify-center gap-2">
 			<Dialog.Root>
 				<Dialog.Trigger>
@@ -49,7 +49,6 @@
 						onchange={getDataSearch}
 						class="text-white"
 						placeholder="Search"
-                       
 					/>
 					<div class="mt-3 text-white">
 						{#if isLoading}
@@ -57,15 +56,17 @@
 						{:else if DataAnime?.data?.length === 0}
 							<p>No results</p>
 						{:else if DataAnime?.data}
-							<ScrollArea class='h-72 w-full rounded-md border'>
+							<ScrollArea class="h-72 w-full rounded-md border">
 								<ul class="space-y-2">
 									{#each DataAnime.data as anime}
 										<li class="flex items-center gap-2 border-b border-gray-600 p-2">
-											<img
+											<a href="/detail/{anime.mal_id}">
+												<img
 												src={anime.images.jpg.image_url}
 												alt={anime.title}
 												class="h-16 w-12 rounded-md"
 											/>
+											</a>
 											<span>{anime.title}</span>
 										</li>
 									{/each}
