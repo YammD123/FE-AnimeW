@@ -73,7 +73,7 @@
 					alt=""
 				/>
 				<Button class="absolute top-2 right-2 bg-gradient-to-r from-yellow-700 to-yellow-400"
-					>{dataCharacters.voice_actors[0].person.name}</Button
+					>{dataCharacters.voice_actors[0]?.person?.name || 'Unknown'}</Button
 				>
 
 				<h1 class="absolute bottom-2 px-2  text-2xl font-bold text-white">
